@@ -48,7 +48,7 @@ int main() {
             y=rand()%11+12;
             //x=sumx/num;
             //y=sumy/num;
-            cout << 1 << " " << deck[i] << " " << x << " " << y << endl;
+            cout << 1 << " " << deck[rand()%4] << " " << x << " " << y << endl;
         }
         cout << "0";
     }
