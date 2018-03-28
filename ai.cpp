@@ -20,17 +20,12 @@ int main() {
             ss>>deck[0]>>deck[1]>>deck[2]>>deck[3];
         }
     }
-    int x[4],y[4];
+    int x,y;
     srand((unsigned)time(NULL));
-    y[0]=rand()%11+12;
-    x[0]=rand()%14+4;
-    y[1]=rand()%4+12;
-    x[1]=rand()%4+4;
-    y[2]=rand()%4+16;
-    x[2]=rand()%4+8;
-    y[3]=rand()%3+20;
-    x[3]=rand()%3+12;
-    for(int i=0; i<4; i++)
-        cout << 1 << " " << deck[rand()%4] << " " << x[i] << " " << y[i] << endl;
+    for(int i=0; i<4; i++) {
+        x=rand()%14+4;
+        y=rand()%11+12;
+        cout << 1 << " " << deck[i] << " " << x << " " << y << endl;
+    }
     cout << "0";
 }
