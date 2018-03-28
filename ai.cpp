@@ -49,5 +49,5 @@ int main() {
         //y=sumy/num;
         cout << 1 << " " << deck[i] << " " << x << " " << y << endl;
     }
-    cout << "0";
+    cout << "0"<<endl;
 }
