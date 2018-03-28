@@ -22,10 +22,15 @@ int main() {
     }
     int x[4],y[4];
     srand((unsigned)time(NULL));
-    for(int i=0; i<4; ++i) {
-        x[i]=rand()%11+12;
-        y[i]=rand()%14+4;
+    y[0]=rand()%11+12;
+    x[0]=rand()%14+4;
+    y[1]=rand()%4+12;
+    x[1]=rand()%4+4;
+    y[2]=rand()%4+16;
+    x[2]=rand()%4+8;
+    y[3]=rand()%3+20;
+    x[3]=rand()%3+12;
+    for(int i=0; i<4; i++)
         cout << 1 << " " << deck[rand()%4] << " " << x[i] << " " << y[i] << endl;
-    }
     cout << "0";
 }
