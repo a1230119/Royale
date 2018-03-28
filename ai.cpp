@@ -27,18 +27,21 @@ int main() {
             	ss1.clear();
             	ss1.str(enemy[2]);
             	while(getline(ss1,temp,',')){//get enemy position
-            		enpos[num]=atoi(temp.c_str());
-            	}
-            	num++;
+            		enpos[num]=atoi(temp.c_str());//string to int
+				}
+				num++;
 			}
         }
-        int x,y,sumx;
+        int x,y,sumx=0;
         for(int i=0;i<num;i++){
         	sumx+=enpos[i];
         } 
         srand((unsigned)time(NULL));
         for(int i=0; i<4; i++) {
-            x=sumx/num;
+            if(num==0)
+				x=rand()%14+4;
+			else
+				x=sumx/num;
             y=rand()%11+12;
             //x=sumx/num;
             //y=sumy/num;
