@@ -22,26 +22,27 @@ int main() {
             if(token=="DECK") {
                 ss>>deck[0]>>deck[1]>>deck[2]>>deck[3];
             }
-            if(token=="ENEMY"){
-            	ss>>enemy[0]>>enemy[1]>>enemy[2]>>enemy[3]>>enemy[4];
-            	ss1.clear();
-            	ss1.str(enemy[2]);
-            	while(getline(ss1,temp,',')){//get enemy position
-            		enpos[num]=atoi(temp.c_str());//string to int
-				}
-				num++;
-			}
+            if(token=="ENEMY") {
+                ss>>enemy[0]>>enemy[1]>>enemy[2]>>enemy[3]>>enemy[4];
+                ss1.clear();
+                ss1.str(enemy[2]);
+                while(getline(ss1,temp,',')) { //get enemy position
+                    enpos[num]=atoi(temp.c_str());//string to int
+                }
+                num++;
+            }
         }
-        int x,y,sumx=0;
-        for(int i=0;i<num;i++){
-        	sumx+=enpos[i];
-        } 
+        int x,y,sumx=0,pos;
+        for(int i=0; i<num; i++) {
+            sumx+=enpos[i];
+        }
+        if(num!=0) pos=sumx/num;
         srand((unsigned)time(NULL));
         for(int i=0; i<4; i++) {
-            if(num==0)
-				x=rand()%14+4;
-			else
-				x=sumx/num;
+            if(pos>=4 && pos <=17)
+                x=pos;
+            else
+                x=rand()%14+4;
             y=rand()%11+12;
             //x=sumx/num;
             //y=sumy/num;
