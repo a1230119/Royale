@@ -41,10 +41,8 @@ int main() {
         }
         srand((unsigned)time(NULL));
         for(int i=0; i<4; i++) {
-            if(pos>=4 && pos <=11)
-                x=6;
-            else if(pos>=12&&pos<=17)
-                x=15;
+            if(pos>=4 && pos <=17)
+                x=pos;
             else
                 x=rand()%14+4;
             y=rand()%11+12;
