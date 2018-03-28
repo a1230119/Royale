@@ -32,15 +32,19 @@ int main() {
                 num++;
             }
         }
-        int x,y,sumx=0,pos;
-        for(int i=0; i<num; i++) {
-            sumx+=enpos[i];
+        int x,y,sumx=0,pos=0;
+        if(num!=0) {
+            for(int i=0; i<num; i++) {
+                sumx+=enpos[i];
+            }
+            pos=sumx/num;
         }
-        if(num!=0) pos=sumx/num;
         srand((unsigned)time(NULL));
         for(int i=0; i<4; i++) {
-            if(pos>=4 && pos <=17)
-                x=pos;
+            if(pos>=4 && pos <=11)
+                x=6;
+            else if(pos>=12&&pos<=17)
+                x=15;
             else
                 x=rand()%14+4;
             y=rand()%11+12;
