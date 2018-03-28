@@ -11,7 +11,7 @@ int main() {
         string str,token,temp;
         string deck[4];
         string enemy[5];
-        int enpos[10];
+        int enpos[100];
         stringstream ss,ss1;
         int num=0;//enemy number
         while(getline(cin,str)) {
