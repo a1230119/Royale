@@ -1,4 +1,4 @@
-player:ai.0
+player:ai.o
 	g++ -o player ai.o
 	g++ -std=c++0x -o player ai.o
 
