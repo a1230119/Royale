@@ -14,7 +14,7 @@ int main() {
         int enpos[100];
         stringstream ss,ss1;
         int num=0,mana;//enemy number
-		bool nosgram=true;
+        bool nosgram=true;
         while(getline(cin,str)) {
             if(str=="END") break;
             ss.clear();
@@ -32,11 +32,11 @@ int main() {
                 }
                 num++;
             }
-			if(token=="FRIEND"){
-				ss>>fd>>others;
-				if(fd=="8")
-					nosgram=false;
-			}
+            if(token=="FRIEND") {
+                ss>>fd>>others;
+                if(fd=="8")
+                    nosgram=false;
+            }
             /*if(toke=="MANA") {
                 ss>>Mana;
                 mana=atoi(Mana.c_str());
@@ -49,15 +49,15 @@ int main() {
             }
             pos=sumx/num;
         }
-		bool sgram=false;
-		for(int i=0;i<4;i++){
-			if(nosgram)
-				break;
-			else if(deck[i]=="8"){
-			sgram=true;
-			break;
-			}
-		}
+        bool sgram=false;
+        for(int i=0; i<4; i++) {
+            if(nosgram)
+                break;
+            else if(deck[i]=="8") {
+                sgram=true;
+                break;
+            }
+        }
         srand((unsigned)time(NULL));
         for(int i=0; i<4; i++) {
             if(pos>=4 && pos <=17)
@@ -65,10 +65,10 @@ int main() {
             else
                 x=rand()%14+4;
             y=rand()%11+12;
-			if(sgram)
-				cout << 1 << " " << 8 << " " << 10 << " " << 12 << endl;
-			else
-				cout << 1 << " " << deck[i] << " " << x << " " << y << endl;
+            if(sgram)
+                cout << 1 << " " << 8 << " " << 10 << " " << 12 << endl;
+            else
+                cout << 1 << " " << deck[i] << " " << x << " " << y << endl;
         }
         cout << "0";
     }
