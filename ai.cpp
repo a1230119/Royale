@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    cout << "6 8 1 4 C 7 3 2" << endl;
+    cout << "1 4 9 6 5 7 3 C" << endl;
     while(1) {
         string str,token,temp;
         string deck[4];
