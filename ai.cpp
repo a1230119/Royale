@@ -66,7 +66,7 @@ int main() {
                 x=rand()%14+4;
             y=rand()%11+12;
             if(sgram)
-                cout << 1 << " " << 8 << " " << 10 << " " << 12 << endl;
+                cout << 1 << " " << 8 << " " << x << " " << 22 << endl;
             else
                 cout << 1 << " " << deck[i] << " " << x << " " << y << endl;
         }
