@@ -35,8 +35,8 @@ int main() {
             if(token=="FRIEND") {
                 ss>>fd>>others;
                 if(fd=="9") dancernum++;
-				else if(fd=="8") sgramnum++;
-			}
+                else if(fd=="8") sgramnum++;
+            }
             if(token=="MANA") {
                 ss>>Mana;
                 mana=atoi(Mana.c_str());
